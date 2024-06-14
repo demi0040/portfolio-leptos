@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
+  <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+  <link rel="stylesheet" href="/styles-305d4af750889877.css" integrity="sha384&#x2D;rZ2aEEYbF1814bV2urr3dV3Y&#x2B;Ui&#x2F;CxZb1nr0VUla6q61&#x2F;ArWFVDLWNasuHK4jbdh"/>
+
+  <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+  <link rel="icon" href="/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384&#x2D;YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi&#x2B;qSXEpwp&#x2B;yM4BW"/>
+
+  <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+  
+<script type="module" nonce="zGXkJTYCP15d9DCcMgj3IQ==">
+import init, * as bindings from '/portfolio-leptos-9f69ddbc9cb00f.js';
+const wasm = await init('/portfolio-leptos-9f69ddbc9cb00f_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+
+  <!-- Include images directory -->
+  
+
+
+<link rel="modulepreload" href="/portfolio-leptos-9f69ddbc9cb00f.js" crossorigin=anonymous integrity="sha384-Xpi9SZhl1Wrj5l8Bl/qIxk7FSFhoQgudxQavmQEFkh9VqjR2lNImGGYVWwd9Ygr6">
+<link rel="preload" href="/portfolio-leptos-9f69ddbc9cb00f_bg.wasm" crossorigin=anonymous integrity="sha384-kEYCQjZJQIqKpOdZrqn9xNiC0DeqBLMmX+2GJRHOLiBjTzUZ7yDJF0xonzW/gFPm" as="fetch" type="application/wasm"></head>
+
+<body>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
+</html>
