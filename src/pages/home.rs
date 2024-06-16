@@ -26,7 +26,7 @@ pub fn Home() -> impl IntoView {
         }>
 
             <div class="container">
-                <Nav/>
+                //<Nav/>
                 <Hero/>
                 <Projects/>
                 <About/>
